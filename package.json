@@ -5,10 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "electron ./electron/main.js",
+    "dev": "nodemon --watch ./electron/main.js --exec npm run start"
   },
   "dependencies": {
+    "@electron/remote": "^2.1.2",
+    "concurrently": "^9.0.1",
     "core-js": "^3.8.3",
+    "electron": "^15.5.7",
+    "electron-reloader": "^1.2.3",
     "vue": "^3.2.13"
   },
   "devDependencies": {
